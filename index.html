@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PristinePro Cleaning Services</title>
+
+  <!-- ✅ Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional Custom Styles -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+
+    /* ✅ Smooth crossfade animation */
+    @keyframes fadeSlide {
+      0% { opacity: 0; }
+      8% { opacity: 1; }
+      33% { opacity: 1; }
+      41% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* Apply consistent duration and easing */
+    .animate-fade1 {
+      animation: fadeSlide 18s infinite ease-in-out;
+    }
+    .animate-fade2 {
+      animation: fadeSlide 18s infinite ease-in-out 6s;
+    }
+    .animate-fade3 {
+      animation: fadeSlide 18s infinite ease-in-out 12s;
+    }
+
+    /* ✅ Ensure all images stay centered */
+    #home .bg-cover {
+      background-position: center center;
+      background-size: cover;
+    }
+
+    /* ✅ Optional fade-up for text or content inside hero */
+    [data-fade] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-fade].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- ✅ Header / Navbar - Mobile Optimized -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-3 sm:px-6 py-2.5 sm:py-4">
+    <!-- Logo -->
+    <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-600">PristinePro</h1>
+    
+    <!-- Navigation Links -->
+    <ul class="flex items-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8">
+      <li><a href="index.html" class="text-blue-600 font-semibold text-xs sm:text-sm md:text-base hover:text-blue-700 transition">Home</a></li>
+      <li><a href="service.html" class="hover:text-blue-600 font-medium text-xs sm:text-sm md:text-base transition">Services</a></li>
+      <li><a href="about.html" class="hover:text-blue-600 font-medium text-xs sm:text-sm md:text-base transition">About</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600 font-medium text-xs sm:text-sm md:text-base transition">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ✅ Hero Section - Responsive -->
+  <section id="home" class="relative h-[60vh] sm:h-[70vh] lg:h-[90vh] flex items-center justify-center overflow-hidden">
+
+    <!-- Background slideshow -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-cover bg-center animate-fade1" style="background-image: url('images/image13.jpg');"></div>
+      <div class="absolute inset-0 bg-cover bg-center animate-fade2" style="background-image: url('images/image2.jpg');"></div>
+      <div class="absolute inset-0 bg-cover bg-center animate-fade3" style="background-image: url('images/image3.jpg');"></div>
+    </div>
+
+    <!-- Overlay to improve text visibility -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+    <!-- Hero Text - Responsive -->
+    <div class="relative z-10 text-center text-white px-4 sm:px-6" data-fade>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">Professional Cleaning Services</h1>
+      <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-3xl mx-auto">We make your home and office shine — fresh, spotless, and welcoming.</p>
+      <a href="contact.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition text-sm sm:text-base">
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+  
+
+<!-- ✅ Our Services Section - Enhanced & Responsive -->
+<section id="quick-services" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+    
+    <!-- Section Title -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Our Main Services</h2>
+    <p class="text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
+      We provide reliable, high-quality cleaning solutions designed to keep your home and office fresh, organized, and spotless.
+    </p>
+
+    <!-- Service Cards - Enhanced Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+      
+      <!-- Card 1 - Home Cleaning -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 overflow-hidden group">
+        <div class="relative">
+          <img src="images/image3.jpg" alt="Home Cleaning" class="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition duration-300">
+          <!-- Popular Badge -->
+          <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+            POPULAR
+          </div>
+        </div>
+        <div class="p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800">Home Cleaning</h3>
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">
+            Deep and affordable home cleaning covering every corner of your house, ensuring a spotless and cozy living space.
+          </p>
+          
+          <!-- Features List -->
+          <ul class="text-left text-gray-600 text-xs sm:text-sm mb-4 space-y-1">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Kitchen & bathroom deep cleaning
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              All rooms dusted & vacuumed
+            </li>
+          </ul>
+
+          <!-- Price & CTA -->
+          <div class="pt-4 border-t border-gray-100">
+            <p class="text-blue-600 font-semibold mb-3 text-sm">Starting from $49/visit</p>
+            <a href="contact.html" class="block w-full bg-blue-600 text-white text-center py-2.5 rounded-lg font-medium hover:bg-blue-700 transition text-sm sm:text-base">
+              Request Quote →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 - Office Cleaning -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 overflow-hidden group">
+        <div class="relative">
+          <img src="images/image17.jpg" alt="Office Cleaning" class="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <div class="p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800">Office Cleaning</h3>
+            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">
+            Maintain a professional workspace with daily or weekly cleaning schedules tailored to your business needs.
+          </p>
+          
+          <!-- Features List -->
+          <ul class="text-left text-gray-600 text-xs sm:text-sm mb-4 space-y-1">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Flexible daily/weekly schedules
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Disinfection & sanitization
+            </li>
+          </ul>
+
+          <!-- Price & CTA -->
+          <div class="pt-4 border-t border-gray-100">
+            <p class="text-blue-600 font-semibold mb-3 text-sm">Starting from $89/visit</p>
+            <a href="contact.html" class="block w-full bg-blue-600 text-white text-center py-2.5 rounded-lg font-medium hover:bg-blue-700 transition text-sm sm:text-base">
+              Request Quote →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 - Carpet & Upholstery -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 overflow-hidden group sm:col-span-2 lg:col-span-1">
+        <div class="relative">
+          <img src="images/image11.jpg" alt="Carpet Cleaning" class="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition duration-300">
+          <!-- Best Value Badge -->
+          <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            BEST VALUE
+          </div>
+        </div>
+        <div class="p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800">Carpet & Upholstery</h3>
+            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">
+            Professional deep cleaning that revives carpets, sofas, and upholstery fabrics — removing stains and odors.
+          </p>
+          
+          <!-- Features List -->
+          <ul class="text-left text-gray-600 text-xs sm:text-sm mb-4 space-y-1">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Steam cleaning technology
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Stain & odor removal
+            </li>
+          </ul>
+
+          <!-- Price & CTA -->
+          <div class="pt-4 border-t border-gray-100">
+            <p class="text-blue-600 font-semibold mb-3 text-sm">Starting from $75/room</p>
+            <a href="contact.html" class="block w-full bg-blue-600 text-white text-center py-2.5 rounded-lg font-medium hover:bg-blue-700 transition text-sm sm:text-base">
+              Request Quote →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ✨ CTA Below Services -->
+    <div class="mt-10 sm:mt-14 bg-white rounded-2xl shadow-lg p-8 sm:p-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Need a Custom Cleaning Plan?</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            We offer tailored solutions for large-scale contracts and special requirements.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="service.html" class="inline-block bg-white border-2 border-blue-600 text-blue-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium hover:bg-blue-50 transition text-sm sm:text-base whitespace-nowrap">
+            More on our Services 
+          </a>
+          <a href="contact.html" class="inline-block bg-blue-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium hover:bg-blue-700 transition text-sm sm:text-base whitespace-nowrap">
+            Get Free Quote →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ✅ About Section (Enhanced) - Responsive -->
+<section id="about" class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
+    
+    <!-- 🖼️ Left Side: Image with Stats Overlay -->
+    <div class="relative order-2 md:order-1">
+      <img src="images/image4.jpg" alt="Professional Cleaning Team" class="rounded-2xl shadow-lg w-full object-cover h-64 sm:h-80 md:h-full">
+      
+      <!-- Experience Badge -->
+      <div class="absolute bottom-4 left-4 bg-blue-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-xl shadow-lg">
+        <p class="text-2xl sm:text-3xl font-bold">5+</p>
+        <p class="text-xs sm:text-sm">Years Experience</p>
+      </div>
+      
+      <!-- Satisfaction Badge -->
+      <div class="absolute top-4 right-4 bg-white text-gray-800 px-3 sm:px-4 py-2 rounded-xl shadow-lg">
+        <p class="text-lg sm:text-xl font-bold text-green-500">100%</p>
+        <p class="text-xs sm:text-sm font-medium">Satisfaction</p>
+      </div>
+    </div>
+
+    <!-- 🧹 Right Side: Enhanced Text -->
+    <div class="order-1 md:order-2">
+      <div class="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full mb-3 sm:mb-4">
+        ABOUT US
+      </div>
+      
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">
+        About PristinePro Cleaning Services
+      </h2>
+      
+      <p class="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+        At <span class="font-semibold text-blue-600">PristinePro Cleaning Services</span>, we're more than just cleaners — 
+        we're your trusted hygiene partners. Our mission is to create spotless, healthy spaces 
+        where you can relax, work, and thrive.
+      </p>
+
+      <!-- Enhanced Features List with Icons -->
+      <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Trusted by 200+ Clients</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">Hundreds of homes and offices rely on us</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Certified Professionals</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">Trained and background-checked cleaning experts</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Flexible & Affordable</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">Scheduling that fits your budget and lifestyle</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+            <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Eco-Friendly Products</h4>
+            <p class="text-gray-600 text-xs sm:text-sm">Safe for your family, pets, and the environment</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="about.html" class="inline-flex items-center justify-center bg-blue-600 text-white px-6 sm:px-7 py-3 rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transition text-sm sm:text-base font-semibold">
+          Learn Our Story
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="inline-flex items-center justify-center bg-white border-2 border-blue-600 text-blue-600 px-6 sm:px-7 py-3 rounded-full shadow hover:bg-blue-50 transition text-sm sm:text-base font-semibold">
+          Get Free Quote
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-6 sm:mt-8 flex flex-wrap gap-4 text-xs sm:text-sm text-gray-600">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <span>5-Star Rated</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Licensed & Insured</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Eco-Certified</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ✅ Why Choose Us - Professional & Responsive -->
+<section id="why" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-blue-50 to-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Why Choose PristinePro?</h2>
+      <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+        We're committed to delivering exceptional cleaning services that exceed your expectations every time.
+      </p>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      
+      <!-- Card 1 - Professional Staff -->
+      <div class="bg-white p-6 sm:p-7 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-blue-600 group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Professional Staff</h3>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Trained, certified, and background-checked cleaners dedicated to quality service.
+        </p>
+      </div>
+
+      <!-- Card 2 - Eco-Friendly -->
+      <div class="bg-white p-6 sm:p-7 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-green-500 group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-500 transition-colors">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-green-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Eco-Friendly</h3>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Safe, non-toxic products that protect your family, pets, and the environment.
+        </p>
+      </div>
+
+      <!-- Card 3 - Flexible Scheduling -->
+      <div class="bg-white p-6 sm:p-7 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-purple-500 group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-500 transition-colors">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-purple-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Flexible Scheduling</h3>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          One-time, weekly, or monthly cleaning tailored to fit your busy lifestyle.
+        </p>
+      </div>
+
+      <!-- Card 4 - 24/7 Support -->
+      <div class="bg-white p-6 sm:p-7 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-orange-500 group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-orange-500 transition-colors">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Excellent Support</h3>
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Responsive customer service team ready to assist with your cleaning needs.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Trust Statistics -->
+    <div class="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div class="text-center">
+        <p class="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">5+</p>
+        <p class="text-gray-600 text-sm sm:text-base">Years Experience</p>
+      </div>
+      <div class="text-center">
+        <p class="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">200+</p>
+        <p class="text-gray-600 text-sm sm:text-base">Happy Clients</p>
+      </div>
+      <div class="text-center">
+        <p class="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">100%</p>
+        <p class="text-gray-600 text-sm sm:text-base">Satisfaction Rate</p>
+      </div>
+      <div class="text-center">
+        <p class="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">24/7</p>
+        <p class="text-gray-600 text-sm sm:text-base">Support Available</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-10 sm:mt-12 text-center">
+      <p class="text-gray-700 text-base sm:text-lg mb-4 sm:mb-6">
+        Ready to experience the PristinePro difference?
+      </p>
+      <a href="contact.html" class="inline-block bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-blue-700 transition shadow-lg hover:shadow-xl">
+        Get Your Free Quote Today →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ✅ Testimonials Section - Professional & Responsive -->
+<section id="testimonials" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">What Our Clients Say</h2>
+    <p class="text-gray-600 text-sm sm:text-base mb-8 sm:mb-10 max-w-2xl mx-auto">
+      Don't just take our word for it — hear from satisfied customers who trust PristinePro for their cleaning needs.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      
+      <!-- Testimonial 1 -->
+      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+        <!-- Rating Stars -->
+        <div class="flex justify-center gap-1 text-yellow-400 text-lg sm:text-xl mb-4">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        
+        <!-- Testimonial Text -->
+        <p class="text-gray-700 mb-6 text-sm sm:text-base leading-relaxed">
+          "PristinePro has transformed our office. The team is punctual, professional, and leaves every space spotless. Highly recommend!"
+        </p>
+        
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+        <!-- Rating Stars -->
+        <div class="flex justify-center gap-1 text-yellow-400 text-lg sm:text-xl mb-4">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        
+        <!-- Testimonial Text -->
+        <p class="text-gray-700 mb-6 text-sm sm:text-base leading-relaxed">
+          "I love their attention to detail. My home has never been this clean — I recommend them to all my friends and family!"
+        </p>
+        
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 sm:col-span-2 lg:col-span-1">
+        <!-- Rating Stars -->
+        <div class="flex justify-center gap-1 text-yellow-400 text-lg sm:text-xl mb-4">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        
+        <!-- Testimonial Text -->
+        <p class="text-gray-700 mb-6 text-sm sm:text-base leading-relaxed">
+          "Reliable and friendly service every time. SPristinePro's team really cares about their work and it shows in the results."
+        </p>
+        
+      </div>
+
+    </div>
+
+    <!-- Optional: Trust Badge -->
+    <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
+      <div class="flex items-center gap-2">
+        <span class="text-blue-600 text-2xl">✓</span>
+        <span>100+ Happy Clients</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-blue-600 text-2xl">✓</span>
+        <span>5-Star Rated Service</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-blue-600 text-2xl">✓</span>
+        <span>Trusted Since 2020</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ✅ Footer - Responsive -->
+  <footer class="bg-gray-800 text-white py-6 sm:py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div>
+          <h4 class="font-bold text-base sm:text-lg mb-3">PristinePro</h4>
+          <p class="text-gray-400 text-xs sm:text-sm">Professional cleaning services you can trust.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3 text-sm sm:text-base">Quick Links</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="service.html" class="hover:text-white">Services</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3 text-sm sm:text-base">Services</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+            <li>Home Cleaning</li>
+            <li>Office Cleaning</li>
+            <li>Carpet & Upholstery</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3 text-sm sm:text-base">Contact</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+            <li>+254 712 345 678</li>
+            <li>info@pristineprocleaning.com</li>
+            <li>Thika Town, Kenya</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-center text-xs sm:text-sm text-gray-400">
+        <p>&copy; 2025 PristinePro Cleaning Services. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 👇 Smooth fade-in when scrolling into view
+    const items = document.querySelectorAll('[data-fade]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
